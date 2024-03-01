@@ -1,0 +1,64 @@
+.body {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hide {
+    display: none !important;
+}
+
+.footer-btn {
+    background-color: #fff;
+    border: 1px solid #777777;
+    color: #333
+}
+
+.footer-btn-selected {
+    background-color: #024890;
+    border: 1px solid #777777;
+    color: #fff
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4,
+#tab5 {
+    resize: both;
+    overflow: auto;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #024890;
+}
+
+.modal-content {
+    overflow: scroll;
+}
+
+.modal-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    background-color: #f8f9fa;
+
+    border-bottom: 1px solid #dee2e6;
+}
+
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-header div {
+    display: flex;
+    align-items: center;
+}
+
+.close-btn {
+    margin-left: auto;
+}
