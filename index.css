@@ -127,3 +127,167 @@
     margin-right: 10%;
 
 }
+/* -- My Notes */
+/* .myNotesBox{
+    position: relative;
+} */
+.myNotes_textFormatting{
+    height: 8%;
+    background-color: #efefef;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* position: fixed; */
+}
+.myNotes_textBody_box{
+    height: 90%;
+    overflow: scroll;
+}
+.my_notes_text{
+    /* height: 100%; */
+    width: 100%;
+    outline: 0;
+    resize: none;
+}
+
+/* -- Resource */
+.resourceTab_navBtns{
+    width: 70px;
+    border: 1px solid #c0c0c0;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px 0 #aaaaaaab;
+    color: #5f5f5f;
+}
+.resourceTab_navBtns:hover{
+    background-color: #e4e4e4;
+}
+.myNotes_textBody_box{
+    color: #0066cc;
+}
+.black_on_hover:hover{
+    color: #000;
+}
+.resource_item{
+    /* margin: 0; */
+    border: 0.5px solid rgb(216, 216, 216);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resource_item_left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.res_item_icon{
+    border-right: 1px solid #d3d3d3;
+    padding: 7px;
+}
+.cursorPointer{
+    cursor: pointer;
+}
+
+/* resource modal */
+.titleEditModal{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    -ms-transform: translate(-40%, -40%);
+    transform: translate(-40%, -40%);
+    display: none;
+    z-index: +2;
+    border-radius: 10px;
+    background-color: white;
+    width: 40vw;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 20px 10px #02588e75;
+}
+.titleModal_header{
+    background-color: #0066cc;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_x_close{
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+.titleModal_body{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+.titleModal_bodyText{
+    width: 25%;
+}
+.titleModal_body > input{
+    width: 60%;
+    outline-color: #eee;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: #5a5a5a;
+}
+.titleModal_footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px;
+}
+
+/*  */
+.text_formatting_btn{
+    width: 45px;
+}
+.myNotes_textFormatting button.active{
+    background-color: #adadad;
+}
+
+/* tooltip over text formatting */
+.tooltip {
+    /* position: relative;
+    display: inline-block; */
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    /* background-color: black; */
+    /* color: #fff; */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  /*  */

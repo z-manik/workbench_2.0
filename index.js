@@ -110,3 +110,81 @@ function CallTranscriptData() {
 function playAudio() {
     console.log("adsfgh")
 }
+document.getElementById('fileUploadBtn').addEventListener('click', openFileUpload);
+function openFileUpload() {
+  document.getElementById('fileId').click();
+}
+
+// resources Title Edit
+let activeTitleName = '';
+function openTitleEditModal(title){
+    activeTitleName = title.id;
+    document.getElementById('titleEditModal').style.display = "flex";
+    document.getElementById('EditableTitle').value = title.innerText;
+    console.log(title)
+}
+
+function closeTitleEditModal(){
+    document.getElementById('titleEditModal').style.display = "none";
+}
+
+function updateResourceTitleEdit(editedTitle){
+    document.getElementById(activeTitleName).innerText = editedTitle.value;
+    closeTitleEditModal()
+}
+
+function deleteResourceItem(resItem){
+    document.getElementById(resItem.id).style.display = "none";
+}
+
+//resources insert Link
+function openInsertLinkModal(){
+    document.getElementById('insertLink').style.display = "flex";
+}
+function closeInsertLinkModal(){
+    document.getElementById('insertLink').style.display = "none";
+}
+function addResourceLink(url, title){
+
+    closeInsertLinkModal()
+}
+
+// -- text formatting
+// Function to toggle bold formatting
+function toggleBold() {
+    document.getElementById('my_notes_text').focus();
+    document.execCommand('bold', false, null);
+    updateButtonState('boldButton');
+  }
+
+  // Function to toggle italic formatting
+  function toggleItalic() {
+    document.getElementById('my_notes_text').focus();
+    document.execCommand('italic', false, null);
+    updateButtonState('italicButton');
+  }
+
+  // Function to toggle underline formatting
+  function toggleUnderline() {
+    document.getElementById('my_notes_text').focus();
+    document.execCommand('underline', false, null);
+    updateButtonState('underlineButton');
+  }
+
+  // Function to change text color
+  function changeTextColor() {
+    document.getElementById('my_notes_text').focus();
+    var color = document.getElementById('colorPicker').value;
+    document.execCommand('foreColor', false, color);
+  }
+
+  // Function to update button state based on the current selection
+  function updateButtonState(buttonId) {
+    // var button = document.getElementById(buttonId);
+    // console.log("button: ", button)
+    // console.log("buttonID: ", buttonId)
+    // var isButtonActive = document.queryCommandState(buttonId.toLowerCase());
+    // console.log("current status (btn):",isButtonActive)
+    // button.classList.toggle('active', !isButtonActive);
+  }
+  // --
