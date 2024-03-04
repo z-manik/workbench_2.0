@@ -67,4 +67,46 @@ function drop(event) {
         tabContent.appendChild(draggedDiv);
     }
 }
+// document.getElementById('callTs').innerHTML = CallTranscriptData();
+function CallTranscriptData() {
+    return (
+        `   <div style="padding:10px">
+            <div class="chat1">
+                <div style="margin-bottom: 5px;"><img src="Customer.png" /></div>
+                <div
+                    style="border-radius:4px;background-color: #f1f1f1;color:#333;padding:10px 10px;font-size:14px;margin-right: 10%;">
+                    You are receiving an inbound call.</div>
+            </div>
+            <div class="chat2">
+                <div style="text-align:right;margin-bottom: 5px;"><img src="Agent.png" /></div>
+                <div
+                    style="border-radius:4px;background-color: #024890;color:#fff;padding:10px 10px;font-size:14px;margin-left: 10%;">
+                    So Miss Smith there is a $15 fee due to late payment on the account. Your due date is the first of the
+                    month but the payment came is on the fifth</div>
+            </div>
+            <div class="chat1">
+                <div style="margin-bottom: 5px;"><img src="Customer.png" /></div>
+                <div
+                    style="border-radius:4px;background-color: #f1f1f1;color:#555;padding:10px 10px;font-size:14px;margin-right: 10%;">
+                    Oh I see, well I was sick and in the hospital so that’s why I was late</div>
+            </div>
+            <div class="chat2">
+                <div style="text-align:right;margin-bottom: 5px;"><img src="Agent.png" /></div>
+                <div
+                    style="border-radius:4px;background-color: #024890;color:#fff;padding:10px 10px;font-size:14px;margin-left: 10%;">
+                    Let me see if there’s any thing I can do.</div>
+            </div>
+            <div class="chat1">
+                <div style="margin-bottom: 5px;"><img src="Coach.png" /></div>
+                <div
+                    style="border-radius:4px;background-color: #FFEBAD;color:#333;padding:10px 10px;font-size:14px;margin-right: 10%;">
+                    I ‘m sorry you didn’t reply using the best practice. Please ensure you include empathy towards a
+                    customer in your response.</div>
+            </div>
+        </div>`
+    )
+}
 
+function playAudio() {
+    console.log("adsfgh")
+}

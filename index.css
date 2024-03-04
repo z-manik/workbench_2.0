@@ -62,3 +62,68 @@
 .close-btn {
     margin-left: auto;
 }
+
+.chat1>div {
+    margin-bottom: 5px;
+
+}
+
+.chat2>div {
+    margin-bottom: 5px;
+}
+
+.chat2 div:first-child {
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.chat3>div {
+    margin-bottom: 5px;
+
+}
+
+.chat4>div {
+    margin-bottom: 5px;
+
+}
+
+.chatBox1 {
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-right: 10%;
+
+}
+
+.chatBox2 {
+    border-radius: 4px;
+    background-color: #024890;
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-left: 10%;
+}
+
+.chatBox3 {
+    border-radius: 4px;
+    background-color: #FFEBAD;
+    color: #333;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-right: 10%;
+
+}
+
+.chatBox4 {
+    border-radius: 4px;
+    background-color: #99d9ff;
+    color: #333;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-right: 10%;
+
+}
