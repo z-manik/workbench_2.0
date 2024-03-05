@@ -127,11 +127,12 @@
     margin-right: 10%;
 
 }
-/* -- My Notes */
+
+/* HG */
 /* .myNotesBox{
     position: relative;
 } */
-.myNotes_textFormatting{
+.myNotes_textFormatting, .resources_textFormatting{
     height: 8%;
     background-color: #efefef;
     color: gray;
@@ -140,9 +141,12 @@
     gap: 10px;
     /* position: fixed; */
 }
-.myNotes_textBody_box{
+.myNotes_textBody_box, .resources_textBody_box{
     height: 90%;
     overflow: scroll;
+}
+.resources_textBody_box{
+    color: #0066cc;
 }
 .my_notes_text{
     /* height: 100%; */
@@ -151,7 +155,6 @@
     resize: none;
 }
 
-/* -- Resource */
 .resourceTab_navBtns{
     width: 70px;
     border: 1px solid #c0c0c0;
@@ -161,9 +164,6 @@
 }
 .resourceTab_navBtns:hover{
     background-color: #e4e4e4;
-}
-.myNotes_textBody_box{
-    color: #0066cc;
 }
 .black_on_hover:hover{
     color: #000;

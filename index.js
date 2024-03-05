@@ -39,7 +39,12 @@ elements.forEach(function (element) {
 });
 
 function onDragStart(event) {
-    event.dataTransfer.setData('text/plain', event.target.id);
+    console.log(event);
+    let focusTab= event.target.id.split("_")
+    console.log(focusTab[0])
+ 
+    // event.dataTransfer.setData('text/plain', event.target.id);
+    event.dataTransfer.setData('text/plain', focusTab[0]);
     startPosX = event.offsetX;
     startPosY = event.offsetY;
 }
@@ -48,10 +53,11 @@ function allowDrop(event) {
 }
 
 function drop(event) {
-    console.log("drop");
     event.preventDefault();
     const divId = event.dataTransfer.getData('text/plain');
-    const draggedDiv = document.getElementById(divId);
+   let focusTab= divId.split("_")
+    // const draggedDiv = document.getElementById(divId);
+    const draggedDiv = document.getElementById(focusTab[0]);
     const tabContent = document.getElementById('modalSheet');
     console.log(divId, draggedDiv, tabContent);
     if (draggedDiv && tabContent) {
@@ -121,7 +127,6 @@ function openTitleEditModal(title){
     activeTitleName = title.id;
     document.getElementById('titleEditModal').style.display = "flex";
     document.getElementById('EditableTitle').value = title.innerText;
-    console.log(title)
 }
 
 function closeTitleEditModal(){

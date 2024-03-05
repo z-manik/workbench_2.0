@@ -38,12 +38,12 @@
         </div>
       </div>
     </div>
-    <div class="modal-dialog-md hide modelBody" id="tab2" role="document" draggable="true"
-      ondragstart="onDragStart(event)"
+    <div class="modal-dialog-md hide modelBody" id="tab2" role="document" 
       style="position: absolute;z-index:1;top:20vh;bottom: 7vh;left:30%;right:550px;width:500px;height:600px">
       <div class="modal-content rounded-4 shadow" style="height:100%">
-        <div class="modal-header border-bottom-0">
-          <h1 class="modal-title fs-5">Call Notes</h1>
+        <div class="modal-header border-bottom-0" id="tab2_head" draggable="true"
+        ondragstart="onDragStart(event)">
+          <h1 class="modal-title fs-5">Scenario</h1>
           <div>
             <button type="button" id="CallNotes-close" class="close-btn" data-bs-dismiss="modal" aria-label="Close"> <i
                 class="fa fa-window-minimize"></i></button>
@@ -62,7 +62,7 @@
       style="position: absolute;z-index:1;top:20vh;left:2vw;bottom: 7vh;right:2.35vw;width:500px;height:600px">
       <div class="modal-content rounded-4 shadow" style="height:100%">
         <div class="modal-header border-bottom-0">
-          <h1 class="modal-title fs-5">My Notes</h1>
+          <h1 class="modal-title fs-5">Notepad</h1>
           <div>
             <button type="button" id="MyNotes-close" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
               <i class="fa fa-window-minimize"></i>
@@ -219,7 +219,7 @@
           </div>
         </div>
         <div class="modal-body py-0 px-0" style="height:90%">
-          <div class="myNotes_textFormatting px-3">
+          <div class="resources_textFormatting px-3">
             <button class="resourceTab_navBtns" id="fileUploadBtn">
               <!-- <input type="file" name="user_file" id="user_file">  -->
               <i class="bi bi-file-earmark"></i>
@@ -227,7 +227,7 @@
               <input id='fileId' type='file' hidden/>
             <button class="resourceTab_navBtns" onclick=openInsertLinkModal()><i class="bi bi-link-45deg"></i>Links</button>
           </div>
-          <div class="myNotes_textBody_box p-2">
+          <div class="resources_textBody_box p-2">
               <div class="resource_item" id="resItem_1">
                 <div class="resource_item_left black_on_hover">
                   <div class="res_item_icon"><i class="bi bi-bar-chart-fill"></i></div>
@@ -298,10 +298,8 @@
       Transcript</button>
     <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="ScreenSim">Screen
       Simulation</button>
-    <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="CallNotes">Call
-      Notes</button>
-    <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="MyNotes">My
-      Notes</button>
+    <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="CallNotes">Scenario</button>
+    <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="MyNotes">Notepad</button>
     <button type="button" class="btn btn-sm btn-primary mr-2 footer-btn" id="Resources">Resources</button>
   </div>
   <script src="index.js"></script>
