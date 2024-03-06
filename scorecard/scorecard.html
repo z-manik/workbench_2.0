@@ -20,14 +20,15 @@
                 X
             </div>
             <div class="overall_skill_rating">
-                <div class="overallSkill_stat_circle">
+                <img src="/assets/images/overall rank score.svg" alt="overall score" class="overallScoreTop">
+                <!-- <div class="overallSkill_stat_circle">
                     <div class="overallSkill_stat_value">
                         4.4
                     </div>
                     <div class="overallSkill_stat_title">
                         Overall
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="scorecard_lowerBox">
@@ -54,7 +55,7 @@
             </section>
 
             <section class="scorecard_lower_statsBox">
-                <div class="scorecard_skillContainer">
+                <div class="scorecard_skillContainer"  id="skill_drawerCollapsed">
                     <div class="scorecard_lower_statsLeft" id="progressStats">
                         <!-- <div class="skill_stat">
                             <div class="skill_stat_circle">
@@ -90,18 +91,41 @@
                         </div> -->
                     </div>
                     <div class="scorecard_lower_statsRight">
-                        <div class="skill_stat">
+                        <div class="skill_stat" style="margin-left: 30px;">
                             <div class="skill_stat_circle">
-                                4.4
+                                <!-- 4.4 -->
+                                <img src="/assets/images/scoreChart5.svg" alt="">
                             </div>
                             <div class="skill_stat_text">
                                 Overall
                             </div>
                         </div>
                         <div class="skill_stats_down_arrow pointer" onclick=openScoreStatBoard()>
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <i class="fa-solid fa-chevron-down" id="downArrow"></i>
+                            <!-- <i class="fa-solid fa-chevron-up" style="display: none;"></i> -->
                         </div>
                     </div>
+                </div>
+                <div class="scorecard_skillContainer_drawer" id="skill_drawerExpanded">
+                    <div class="scorecard_drawer_upper">
+                        <div class="scorecard_drawer_upLeft">
+                            <div class="scorecard_drawer_upLeft_top" id="drawer_skillHeadings">
+                                <!-- content through js -->
+                            </div>
+                            <div class="scorecard_drawer_upLeft_bottom" id="drawer_scoreValues">
+                                <!-- content through js -->
+                            </div>
+                        </div>
+                        <div class="scorecard_drawer_upRight">
+                            <div class="skill_stats_down_arrow pointer" onclick=closeScoreStatBoard()>
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <!-- <i class="fa-solid fa-chevron-up" style="display: none;"></i> -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scorecard_drawer_button pointer">
+                        Get Detailed Report ↗
+                    </button>
                 </div>
             </section>
             

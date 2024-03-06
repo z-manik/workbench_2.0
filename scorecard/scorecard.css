@@ -29,6 +29,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.overallScoreTop{
+    width: 90%;
+}
 .overallSkill_stat_circle{
     width: 75px;
     height: 75px;
@@ -103,15 +106,106 @@ body{
 }
 .scorecard_lower_statsRight{
     width: 30%;
+    padding: 0 6px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-.scorecard_skillContainer{
-    padding: 10px;
-    display: flex;
     justify-content: space-between;
 }
+.scorecard_skillContainer{
+    display: flex;
+    /* display: none; */
+    justify-content: space-between;
+    padding: 10px;
+}
+.scorecard_skillContainer_drawer{
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.scorecard_drawer_upper{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.scorecard_drawer_upLeft{
+    width: 92%;
+}
+.scorecard_drawer_upRight{
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+.scorecard_drawer_upLeft_top{
+    width: 100%;
+    display: flex;
+    border-bottom: 0.7px solid #E3E3E3;
+}
+.scorecard_drawer_upLeft_bottom{
+    width: 100%;
+    display: flex;
+}
+.drawer_scoreHeading{
+    width: 20%;
+    color: #71727B;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+}
+.drawer_scoreHeading:first-child{
+    width: 15%;
+    margin: 0 10px;
+    border-right: 0.7px solid #E3E3E3;
+}
+.drawer_sideColumnBox{
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.drawer_sideCol_title{
+    font-weight: 600;
+    font-size: 12px;
+}
+.drawer_sideCol_pract{
+    font-size: 10px;
+}
+.drawer_scoreValueBox{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.drawer_bottom_bars{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+.drawer_currentScoreVal{
+    font-size: 18px;
+    font-weight: 500;
+}
+.drawer_lastScoreVal{
+    font-size: 16px;
+    padding-right: 18px;
+}
+.scorecard_drawer_button{
+    width: 100%;
+    border: 1px solid #6A2ECD;
+    border-radius: 5px;
+    color: #6A2ECD;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+.scorecard_drawer_button:hover{
+    background-color: #6b2ecd07;
+  }
 
 /* pro tip */
 .scorecard_lower_proTip{
@@ -161,12 +255,18 @@ body{
     color: #6A2ECD;
     background-color: transparent;
   }
+  .scoreCard_foot_btn_unfilled:hover{
+    background-color: #6b2ecd0c;
+  }
   .scoreCard_foot_btn_filled{
     border-radius: 5px;
     padding: 10px 20px;
     background-color: #6A2ECD;
     color: white;
     border: none;
+  }
+  .scoreCard_foot_btn_filled:hover{
+    background-color: #5624a5;
   }
   /*  */
 
@@ -181,7 +281,7 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid rgb(203, 203, 203);
+    /* border: 2px solid rgb(203, 203, 203); */
     background-color: #fff;
     display: flex;
     justify-content: center;
