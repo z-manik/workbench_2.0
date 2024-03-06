@@ -1,0 +1,203 @@
+body{
+    margin: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+.scorecard_container{
+    border-radius: 7px;
+    width: 600px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px #84848421;
+}
+.scorecard_upperBox{
+    position: relative;
+}
+.headphoneCover_img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.overall_skill_rating{
+    position: absolute;
+    bottom: -50px;
+    left: 45%;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overallSkill_stat_circle{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 5px solid rgb(203, 203, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    color: #707070;
+}
+.overallSkill_stat_value{
+    font-size: 34px;
+}
+.closeIcon{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    color: white;
+    text-shadow: 0 0 10px #4e4e4eb6;
+    font-weight: 500;
+    font-size: 20px;
+}
+.pointer{
+    cursor: pointer;
+}
+.scorecard_lowerBox{
+    /* width: 100%; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+.scorecard_lower_practices{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.completed_practices{
+    background-color: #DCF4FF;
+    border-radius: 5px;
+    padding: 10px;
+}
+.practice_time{
+    text-align: right;
+}
+.scorecard_lower_title{
+    width: 100%;
+}
+.scorecard_lower_Heading{
+    font-size: 30px;
+    font-weight: 600;
+}
+.scorecard_lower_subHeading{
+    color: #71727B;
+}
+.scorecard_lower_statsBox{
+    background-color: #F8F8F8;
+    width: 100%;
+    
+}
+.scorecard_lower_statsLeft{
+    border-right: 1px solid #eee;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.scorecard_lower_statsRight{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.scorecard_skillContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* pro tip */
+.scorecard_lower_proTip{
+    width: 100%;
+}
+.pro_tip {
+    background-color: #f4fcff;
+    /* margin: 10px 0; */
+    padding: 10px 10px;
+    border-left: 5px solid #34c9ff;
+  }
+  
+  .pro_tip_title {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pro_tip_desc {
+    font-size: 11px;
+    font-weight: 300;
+  }
+  
+  .info_icon {
+    font-size: 15px;
+    margin-right: 5px;
+    color: #00B0FF;
+  }
+  /*  */
+
+  /* footer */
+  .scorecard_lower_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .scorecard_lower_foot_left{
+    display: flex;
+    gap: 20px;
+  }
+  .scoreCard_foot_btn_unfilled{
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 1.5px solid #6A2ECD;
+    color: #6A2ECD;
+    background-color: transparent;
+  }
+  .scoreCard_foot_btn_filled{
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: #6A2ECD;
+    color: white;
+    border: none;
+  }
+  /*  */
+
+  /* skill stat circle */
+  .skill_stat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .skill_stat_circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(203, 203, 203);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill_stat_text{
+    color: #71727B;
+    font-size: 12px;
+  }
+  .skill_stats_down_arrow{
+    background-color: #E3E3E3;
+    color: #F8F8F8;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
