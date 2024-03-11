@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
-    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/85a0c2a2ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="scorecard.css">
     <script src="scorecard.js" defer></script>
@@ -11,24 +9,26 @@
     <title>scorecard</title>
 </head>
 <body>
-    <div class="scorecard_container">
+    <div class="scorecard_container" id="scorecard_container">
         <div class="scorecard_upperBox">
             <div class="scorecard_upperBox_cover">
                 <img src="/assets/images/headphones bg.png" alt="" class="headphoneCover_img">
             </div>
-            <div class="closeIcon pointer">
-                X
+            <div class="closeIcon pointer" onclick=closeScoreCard()>
+                <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="overall_skill_rating">
-                <img src="/assets/images/overall rank score.svg" alt="overall score" class="overallScoreTop">
-                <!-- <div class="overallSkill_stat_circle">
-                    <div class="overallSkill_stat_value">
-                        4.4
+                <!-- <img src="/assets/images/overall rank score.svg" alt="overall score" class="overallScoreTop"> -->
+                <div class="skill_stat_OverviewOuterCircle">
+                    <div class="overallSkill_stat_circle">
+                        <div class="overallSkill_stat_value">
+                            4.4
+                        </div>
+                        <div class="overallSkill_stat_title">
+                            Overall
+                        </div>
                     </div>
-                    <div class="overallSkill_stat_title">
-                        Overall
-                    </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="scorecard_lowerBox">
@@ -92,9 +92,11 @@
                     </div>
                     <div class="scorecard_lower_statsRight">
                         <div class="skill_stat" style="margin-left: 30px;">
-                            <div class="skill_stat_circle">
-                                <!-- 4.4 -->
-                                <img src="/assets/images/scoreChart5.svg" alt="">
+                            <div class="skill_stat_OuterCircle">
+                                <div class="skill_stat_circle">
+                                    4.4
+                                    <!-- <img src="/assets/images/scoreChart5.svg" alt=""> -->
+                                </div>
                             </div>
                             <div class="skill_stat_text">
                                 Overall

@@ -9,10 +9,12 @@ function progressStats(){
     let str = ""
     progressStatsData.forEach((a)=>{ 
         str += `<div class="skill_stat">
-        <div class="skill_stat_circle">
-            <!-- ${a.currScore} -->
-            <img src=${a.imgUrl} alt="">
-        </div>
+        <div class="skill_stat_OuterCircle">
+            <div class="skill_stat_circle">
+                ${a.currScore}
+                <!-- <img src=${a.imgUrl} alt=""> -->
+            </div>
+        </div>    
         <div class="skill_stat_text">
             ${a.name}
         </div>
@@ -71,4 +73,8 @@ function openScoreStatBoard(){
 function closeScoreStatBoard(){
     document.getElementById('skill_drawerExpanded').style.display = 'none';
     document.getElementById('skill_drawerCollapsed').style.display = 'flex';
+}
+
+function closeScoreCard(){
+    document.getElementById('scorecard_container').style.display = 'none';
 }
