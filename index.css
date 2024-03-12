@@ -29,10 +29,12 @@
     overflow: auto;
 }
 
-.close-btn {
+.close-btn,
+.play-btn {
     background: transparent;
     border: none;
     color: #024890;
+    cursor: pointer;
 }
 
 .modal-content {
@@ -132,7 +134,8 @@
 /* .myNotesBox{
     position: relative;
 } */
-.myNotes_textFormatting, .resources_textFormatting{
+.myNotes_textFormatting,
+.resources_textFormatting {
     height: 8%;
     background-color: #efefef;
     color: gray;
@@ -141,34 +144,46 @@
     gap: 10px;
     /* position: fixed; */
 }
-.myNotes_textBody_box, .resources_textBody_box{
+
+.myNotes_textBody_box,
+.resources_textBody_box {
     height: 90%;
     overflow: scroll;
 }
-.resources_textBody_box{
+
+.resources_textBody_box {
     color: #0066cc;
 }
-.my_notes_text{
+
+.my_notes_text {
     /* height: 100%; */
     width: 100%;
     outline: 0;
     resize: none;
 }
 
-.resourceTab_navBtns{
+/* -- Resource */
+.resourceTab_navBtns {
     width: 70px;
     border: 1px solid #c0c0c0;
     border-radius: 7px;
     box-shadow: 1px 1px 3px 0 #aaaaaaab;
     color: #5f5f5f;
 }
-.resourceTab_navBtns:hover{
+
+.resourceTab_navBtns:hover {
     background-color: #e4e4e4;
 }
-.black_on_hover:hover{
+
+.myNotes_textBody_box {
+    color: #0066cc;
+}
+
+.black_on_hover:hover {
     color: #000;
 }
-.resource_item{
+
+.resource_item {
     /* margin: 0; */
     border: 0.5px solid rgb(216, 216, 216);
     padding: 5px 10px;
@@ -176,21 +191,24 @@
     justify-content: space-between;
     align-items: center;
 }
-.resource_item_left{
+
+.resource_item_left {
     display: flex;
     align-items: center;
     gap: 8px;
 }
-.res_item_icon{
+
+.res_item_icon {
     border-right: 1px solid #d3d3d3;
     padding: 7px;
 }
-.cursorPointer{
+
+.cursorPointer {
     cursor: pointer;
 }
 
 /* resource modal */
-.titleEditModal{
+.titleEditModal {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -205,7 +223,8 @@
     gap: 20px;
     box-shadow: 0 0 20px 10px #02588e75;
 }
-.titleModal_header{
+
+.titleModal_header {
     background-color: #0066cc;
     color: white;
     border-radius: 10px 10px 0 0;
@@ -215,23 +234,27 @@
     justify-content: space-between;
     align-items: center;
 }
-.btn_x_close{
+
+.btn_x_close {
     font-weight: 600;
     color: white;
     background-color: transparent;
     border: none;
 }
-.titleModal_body{
+
+.titleModal_body {
     display: flex;
     /* justify-content: center; */
     align-items: center;
     gap: 20px;
     padding: 15px;
 }
-.titleModal_bodyText{
+
+.titleModal_bodyText {
     width: 25%;
 }
-.titleModal_body > input{
+
+.titleModal_body>input {
     width: 60%;
     outline-color: #eee;
     border: 1px solid #c3c3c3;
@@ -239,7 +262,8 @@
     padding: 2px 5px;
     color: #5a5a5a;
 }
-.titleModal_footer{
+
+.titleModal_footer {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -247,10 +271,11 @@
 }
 
 /*  */
-.text_formatting_btn{
+.text_formatting_btn {
     width: 45px;
 }
-.myNotes_textFormatting button.active{
+
+.myNotes_textFormatting button.active {
     background-color: #adadad;
 }
 
@@ -259,9 +284,9 @@
     /* position: relative;
     display: inline-block; */
     /* border-bottom: 1px dotted black; */
-  }
-  
-  .tooltiptext {
+}
+
+.tooltiptext {
     visibility: hidden;
     width: 120px;
     /* background-color: black; */
@@ -274,9 +299,9 @@
     bottom: 150%;
     left: 50%;
     margin-left: -60px;
-  }
-  
-  .tooltiptext::after {
+}
+
+.tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -285,9 +310,18 @@
     border-width: 5px;
     border-style: solid;
     border-color: black transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
-  /*  */
+}
+
+/*  */
+
+.tox-tinymce {
+    border-radius: 0px !important;
+}
+
+.tox-statusbar {
+    display: none !important;
+}

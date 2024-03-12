@@ -40,9 +40,9 @@ elements.forEach(function (element) {
 
 function onDragStart(event) {
     console.log(event);
-    let focusTab= event.target.id.split("_")
+    let focusTab = event.target.id.split("_")
     console.log(focusTab[0])
- 
+
     // event.dataTransfer.setData('text/plain', event.target.id);
     event.dataTransfer.setData('text/plain', focusTab[0]);
     startPosX = event.offsetX;
@@ -55,7 +55,7 @@ function allowDrop(event) {
 function drop(event) {
     event.preventDefault();
     const divId = event.dataTransfer.getData('text/plain');
-   let focusTab= divId.split("_")
+    let focusTab = divId.split("_")
     // const draggedDiv = document.getElementById(divId);
     const draggedDiv = document.getElementById(focusTab[0]);
     const tabContent = document.getElementById('modalSheet');
@@ -118,38 +118,38 @@ function playAudio() {
 }
 document.getElementById('fileUploadBtn').addEventListener('click', openFileUpload);
 function openFileUpload() {
-  document.getElementById('fileId').click();
+    document.getElementById('fileId').click();
 }
 
 // resources Title Edit
 let activeTitleName = '';
-function openTitleEditModal(title){
+function openTitleEditModal(title) {
     activeTitleName = title.id;
     document.getElementById('titleEditModal').style.display = "flex";
     document.getElementById('EditableTitle').value = title.innerText;
 }
 
-function closeTitleEditModal(){
+function closeTitleEditModal() {
     document.getElementById('titleEditModal').style.display = "none";
 }
 
-function updateResourceTitleEdit(editedTitle){
+function updateResourceTitleEdit(editedTitle) {
     document.getElementById(activeTitleName).innerText = editedTitle.value;
     closeTitleEditModal()
 }
 
-function deleteResourceItem(resItem){
+function deleteResourceItem(resItem) {
     document.getElementById(resItem.id).style.display = "none";
 }
 
 //resources insert Link
-function openInsertLinkModal(){
+function openInsertLinkModal() {
     document.getElementById('insertLink').style.display = "flex";
 }
-function closeInsertLinkModal(){
+function closeInsertLinkModal() {
     document.getElementById('insertLink').style.display = "none";
 }
-function addResourceLink(url, title){
+function addResourceLink(url, title) {
 
     closeInsertLinkModal()
 }
@@ -160,36 +160,89 @@ function toggleBold() {
     document.getElementById('my_notes_text').focus();
     document.execCommand('bold', false, null);
     updateButtonState('boldButton');
-  }
+}
 
-  // Function to toggle italic formatting
-  function toggleItalic() {
+// Function to toggle italic formatting
+function toggleItalic() {
     document.getElementById('my_notes_text').focus();
     document.execCommand('italic', false, null);
     updateButtonState('italicButton');
-  }
+}
 
-  // Function to toggle underline formatting
-  function toggleUnderline() {
+// Function to toggle underline formatting
+function toggleUnderline() {
     document.getElementById('my_notes_text').focus();
     document.execCommand('underline', false, null);
     updateButtonState('underlineButton');
-  }
+}
 
-  // Function to change text color
-  function changeTextColor() {
+// Function to change text color
+function changeTextColor() {
     document.getElementById('my_notes_text').focus();
     var color = document.getElementById('colorPicker').value;
     document.execCommand('foreColor', false, color);
-  }
+}
 
-  // Function to update button state based on the current selection
-  function updateButtonState(buttonId) {
+// Function to update button state based on the current selection
+function updateButtonState(buttonId) {
     // var button = document.getElementById(buttonId);
     // console.log("button: ", button)
     // console.log("buttonID: ", buttonId)
     // var isButtonActive = document.queryCommandState(buttonId.toLowerCase());
     // console.log("current status (btn):",isButtonActive)
     // button.classList.toggle('active', !isButtonActive);
-  }
-  // --
+}
+// --
+
+
+tinymce.init({
+    selector: 'textarea#myNotes',
+    height: 600,
+    menubar: false,
+    plugins: [
+        'advlist autolink lists link image charmap print preview anchor',
+        'searchreplace visualblocks code fullscreen',
+        'insertdatetime media table paste code help wordcount'
+    ],
+    toolbar: 'undo redo | formatselect | ' +
+        'bold italic backcolor | alignleft aligncenter ' +
+        ' alignright alignjustify | bullist numlist outdent indent | ' +
+        'removeformat | help ', // Added customImageUpload button
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif;border-radius:0px; font-size:14px }',
+    setup: function (editor) {
+        editor.ui.registry.addButton('customImageUpload', {
+            icon: 'image',
+            tooltip: 'Upload Image',
+            onAction: function () {
+                openFilePickerDialog(editor);
+            }
+        });
+    }
+});
+
+function openFilePickerDialog(editor) {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*'; // Specify accepted file types if needed
+    fileInput.addEventListener('change', function () {
+        const file = this.files[0];
+        uploadImage(editor, file);
+    });
+    fileInput.click();
+}
+
+function uploadImage(editor, file) {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    // Assuming you have an endpoint for handling image uploads
+    fetch('/upload/image', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            editor.insertContent(`<img src="${data.location}" alt="${file.name}">`);
+        })
+        .catch(error => console.error('Error uploading image:', error));
+}
